@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be - Writing on the Wall</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/category.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-image 0.5s ease;
+        }
+        
+        .container {
+            display: flex;
+            flex: 1;
+            padding: 5vw;
+            max-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .left-side {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3vw;
+            font-weight: bold;
+            padding: 2vw;
+            position: relative;
+        }
+        
+        .right-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1.5vw;
+            line-height: 1.6;
+            white-space: pre-line;
+            padding: 2vw;
+        }
+        
+        .site-footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1vw;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .site-footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 1vw;
+        }
+        
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../images/BeKind!_1.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease, background-image 0.5s ease;
+            z-index: 0;
+        } 
+        
+        .background-image.active {
+            opacity: 0.7;
+            background-image: url('../../screengrab/BeKind!_1.jpeg');
+        }
+        
+        /* Advice container styles */
+        .advice-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        .advice {
+            position: absolute;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1.5s ease, transform 1.5s ease;
+            pointer-events: auto;
+        }
+        
+        .advice.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10vw;
+            }
+            
+            .left-side {
+                font-size: 5vw;
+                margin-bottom: 5vw;
+            }
+            
+            .right-side {
+                font-size: 3vw;
+                line-height: 1.4;
+            }
+            
+            .site-footer a {
+                font-size: 2.5vw;
+            }
+        }
+        
+        .bg-hover-message {
+            text-decoration: none;
+            cursor: pointer; /* keep the pointer for clickability */
+        }
+        
+        
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+           perspectives 
+        </div>
+        <div class="right-side">
+            It's okay to spiral
+
+            <span class="bg-hover-message" data-bg="../../screengrab/Its okay to be weak, but never ok to stay weak_1.jpg" > It's ok to look back at the mistakes in your life...Just don't stare.</span>
+            <span class="bg-hover-message" data-bg="../../screengrab/Worry about the things you can control not those you cant_1.jpg"> Worry about the things you can control, not those you can't.</span>
+            <br>
+            <span class="bg-hover-message" data-bg="../../screengrab/There are no problems_1.jpg" > There are no problems.</span>
+            <span class="bg-hover-message" data-bg="../../screengrab/Dont blame others for you problems_1.jpg"> Don't blame others for your problems, you can only blame yourself. This is empowerment - taking responsibility.</span>
+            <br>
+            <span class="bg-hover-message" data-bg="../../screengrab/Watch your head_1.jpg" > Watch your head.</span>
+            <br>
+            <span class="bg-hover-message" data-bg="../../screengrab/Expect nothing_1.png" > Expect nothing.</span>
+            <span class="bg-hover-message" data-bg="../../screengrab/If you are feeling down, look up, cause the sky is there_1.png" > If you're feeling down, look up, cause the sky is there</span>
+            <span class="bg-hover-message" data-bg="../../screengrab/If it doesnt make you happy, let it go!_1.png" > If it doesn't make you happy, let it go!</span>
+            <br>
+            <span class="bg-hover-message" data-bg="../../screengrab/Everything happens for a reason_1.png" > Everything happens for a reason.</span>
+            <span class="bg-hover-message" data-bg="../../screengrab/You can only connect them. Looking backward_1.jpg" > You can only connect them. Looking backward.</span>
+            <br>
+            <span class="bg-hover-message" data-bg="../../screengrab/dontsweatthesmallstuff_1.png" > Don't sweat the small stuff</span>
+            <span class="bg-hover-message" data-bg="../../screengrab/Dont sweat the small stuff, stupid_1.png" > Don't sweat the small stuff, stupid</span>
+            <br>
+            <span class="bg-hover-message" data-bg="../../screengrab/Big things are great but make sure to enjoy the small moments_1.jpg" > Big things are great but make sure to enjoy the small moments.</span>
+            <span class="bg-hover-message" data-bg="../../screengrab/Keep it simple_1.jpg" > Keep it simple.</span>
+            <span class="bg-hover-message" data-bg="../../screengrab/its not that deep_1.png" > it's not that deep</span>
+            <br>
+            <span class="bg-hover-message" data-bg="../../screengrab/Maktub. Everything is meant to be_1.png" > Maktub. Everything is meant to be.</span>
+        </div>  
+            
+    </div>
+    
+    <div class="background-image"></div>
+    
+    <footer class="site-footer">
+        <p><a href="../../index.html">← back</a></p>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+    <script src="../../js/category.js"></script>
+    <script src="../../js/backgroundchange.js"></script>
+    <script src="../../js/messagelink.js"></script>
+
+</body>
+</html> 

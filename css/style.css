@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'MG';
+    src: url('../fonts/mg_thin.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MG';
+    src: url('../fonts/mg_thin.otf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-family: 'MG', serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-family: 'MG', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.advice-container {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.advice {
+    position: absolute;
+    padding: 1.5rem;
+    background: transparent;
+    cursor: pointer;
+    transition: all 1.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    font-family: 'MG', serif;
+    font-style: normal;
+    text-align: center;
+    max-width: 300px;
+}
+
+.advice.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.advice:hover {
+    font-style: italic;
+    transform: scale(1.05);
+}
+
+/* Different sizes for different categories */
+.advice.life {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.advice.self {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.advice.others {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.advice.family {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.advice.dream {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.advice.action {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.advice.growth {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.advice.perspective {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.advice.work {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.advice.connection {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.advice.self-reliance {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.advice.learn {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .advice {
+        padding: 1rem;
+        max-width: 250px;
+    }
+
+    .advice.life { font-size: 1.3rem; }
+    .advice.self { font-size: 1.4rem; }
+    .advice.be { font-size: 1.7rem; }
+    .advice.others { font-size: 1.2rem; }
+    .advice.family { font-size: 1.3rem; }
+    .advice.intake { font-size: 1.2rem; }
+    .advice.dream { font-size: 1.2rem; }
+    .advice.winandfail { font-size: 1.4rem; }
+    .advice.action { font-size: 1.6rem; }
+    .advice.growth { font-size: 1.2rem; }
+    .advice.perspective { font-size: 1.3rem; }
+    .advice.work { font-size: 1.1rem; }
+    .advice.connection { font-size: 1.8rem; }
+    .advice.agency { font-size: 1.2rem; }
+    .advice.learn { font-size: 1.3rem; }
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 9px 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 0.7rem;
+    color: #666;
+    z-index: 1000;
+} 
